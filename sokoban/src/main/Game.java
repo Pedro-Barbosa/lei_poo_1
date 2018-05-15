@@ -1,17 +1,28 @@
 package main;
 
+import javax.swing.JFrame;
+import lib.states.GameState;
+
 public class Game extends javax.swing.JFrame {
 
+    public static GameState gameState;
+    
     public Game() {
         initComponents();
-        centerWindow();
+        initExtraComponents();
     }
-
+    
+    private void initExtraComponents() {
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        //centerWindow();
+    }
+    
+    /*
     private void centerWindow() {
         this.pack();
         this.setBounds(this.getX(), this.getY(), this.getWidth(), this.getHeight());
         this.setLocationRelativeTo(null);
-    }
+    }*/
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -23,11 +34,11 @@ public class Game extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 546, Short.MAX_VALUE)
+            .addGap(0, 906, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 429, Short.MAX_VALUE)
+            .addGap(0, 528, Short.MAX_VALUE)
         );
 
         pack();

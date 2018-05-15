@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package lib.entities.player;
 
 import java.util.ArrayList;
@@ -10,13 +5,34 @@ import lib.behaviour.CollidableEntity;
 import lib.behaviour.MovableEntity;
 import lib.general.GameObject;
 import lib.general.MovableObject;
+import lib.states.GameState;
+import main.Game;
 
-/**
- *
- * @author 6100353
- */
 public class Player extends MovableObject implements CollidableEntity, MovableEntity {
 
+    private int initialX;
+    private int initialY;
+
+    public Player() {
+        setImage("res/images/player.png");
+    }
+
+    public int getInitialX() {
+        return initialX;
+    }
+
+    public void setInitialX(int initialX) {
+        this.initialX = initialX;
+    }
+
+    public int getInitialY() {
+        return initialY;
+    }
+
+    public void setInitialY(int initialY) {
+        this.initialY = initialY;
+    }
+    
     @Override
     public boolean isCollidingRight() {
         return false;
@@ -47,12 +63,18 @@ public class Player extends MovableObject implements CollidableEntity, MovableEn
     }
 
     @Override
-    public void move() {}
+    public void move() {
+    
+    }
 
     @Override
     public void move(int x, int y) {}
-
-    @Override
-    public void run() {}
     
+    @Override
+    public void run() {
+        while(Game.gameState == GameState.RUNNING) {
+            move();
+        }
+    }
+
 }

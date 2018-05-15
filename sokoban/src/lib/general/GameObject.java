@@ -1,26 +1,45 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package lib.general;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-/**
- *
- * @author 6100353
- */
 public class GameObject extends JLabel {
 
+    private int x;
+    private int y;
+    
     public GameObject() {
         initComponents();
     }
-    
-    private void initComponents() {
-        this.setText("");
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
     }
     
+    public GameObject(String imgUrl) {
+        initComponents();
+        this.setImage(imgUrl);
+    }
+    
+    private void initComponents() {
+        this.setText(null);
+    }
+    
+    public void setImage(String url) {
+        ImageIcon image = new ImageIcon(url);
+        this.setIcon(image);
+    }
     
 }
