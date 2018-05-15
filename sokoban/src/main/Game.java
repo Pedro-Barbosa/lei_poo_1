@@ -8,9 +8,9 @@ public class Game extends javax.swing.JFrame {
     }
 
     private void centerWindow() {
+        this.pack();
         this.setBounds(this.getX(), this.getY(), this.getWidth(), this.getHeight());
         this.setLocationRelativeTo(null);
-        this.pack();
     }
     
     @SuppressWarnings("unchecked")
@@ -23,11 +23,11 @@ public class Game extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 555, Short.MAX_VALUE)
+            .addGap(0, 546, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 411, Short.MAX_VALUE)
+            .addGap(0, 429, Short.MAX_VALUE)
         );
 
         pack();
