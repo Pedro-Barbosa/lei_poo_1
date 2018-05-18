@@ -3,9 +3,11 @@ package main;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import lib.menu.MainMenu;
 import lib.enums.GameState;
 import lib.enums.MenuOption;
+import lib.utils.GameUtils;
 
 public class Game extends javax.swing.JFrame {
 
@@ -39,19 +41,18 @@ public class Game extends javax.swing.JFrame {
         
         // defines options behaviours
         menu.addClickListener(MenuOption.START,(t) -> {
-            System.out.println("START");
+            GameUtils.showDialogMessage("Info", "START", JOptionPane.INFORMATION_MESSAGE);
         });
         
         menu.addClickListener(MenuOption.EDITOR,(t) -> {
-            System.out.println("EDITOR");
+            GameUtils.showDialogMessage("Info", "EDITOR", JOptionPane.INFORMATION_MESSAGE);
         });
         
         menu.addClickListener(MenuOption.ABOUT,(t) -> {
-            System.out.println("ABOUT");
+            GameUtils.showDialogMessage("Info", "ABOUT", JOptionPane.INFORMATION_MESSAGE);
         });
         
         menu.addClickListener(MenuOption.QUIT,(t) -> {
-            System.out.println("QUIT");
             this.dispose();
         });
         
