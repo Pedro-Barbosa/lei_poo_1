@@ -14,7 +14,7 @@ public class Map {
     private int mapIdentification;
 
     /**
-     * @see Método utilizado para definir um nome de um mapa
+     * Utilizado para definir um nome de um mapa
      * @param name - Nome do mapa
      */
     public void setName(String name) {
@@ -23,7 +23,7 @@ public class Map {
     
     /**
      *
-     * @see Método utilizado para obter o nome do mapa
+     * Utilizado para obter o nome do mapa
      * @return Nome do Mapa
      */
     public String getName() {
@@ -32,7 +32,7 @@ public class Map {
     
     /**
      *
-     * @see Método utilizado para adicionar uma música de fundo ao mapa
+     * Utilizado para adicionar uma música de fundo ao mapa
      * @param url - Diretório do clip de música
      */
     public void setMusic(String url) {
@@ -41,7 +41,7 @@ public class Map {
     
     /**
      *
-     * @see Método utilizado para adicionar uma imagem de fundo ao mapa
+     * Utilizado para adicionar uma imagem de fundo ao mapa
      * @param url - Diretório da imagem de fundo
      */
     public void setBackground(String url) {
@@ -50,7 +50,7 @@ public class Map {
     
     /**
      *
-     * @see Método utilizado para adicionar objetos ao mapa
+     * Utilizado para adicionar objetos ao mapa
      * @param obj - Objeto a adicionar ao mapa
      */
     public void addObject(GameObject obj) {
@@ -58,7 +58,7 @@ public class Map {
     }
     
     /**
-     * @see Método utilizado para remover objetos do mapa
+     * Utilizado para remover objetos do mapa
      * @param obj - Objeto a remover do mapa
      */
     public void removeObject(GameObject obj) {

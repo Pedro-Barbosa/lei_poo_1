@@ -25,7 +25,7 @@ public class MainMenu extends JPanel {
     
     /**
      *
-     * @see Construtor da classe MainMenu passando uma posição, uma largura e uma altura.
+     * Construtor da classe MainMenu passando uma posição, uma largura e uma altura.
      * @param x
      * @param y
      * @param width
@@ -36,7 +36,7 @@ public class MainMenu extends JPanel {
     }
 
     /**
-     * @see Construtor por defeito da classe MainMenu
+     * Construtor por defeito da classe MainMenu
      */
     public MainMenu() {
         this(0, 0, 500, 500);
@@ -60,9 +60,9 @@ public class MainMenu extends JPanel {
     
     /**
      *
-     * @see Método utilizado para adicionar comportamentos ao clique nas opções do menu
-     * @param type - Tipo de opção
-     * @param toDo - Comportamento a efetuar
+     *  utilizado para adicionar comportamentos ao clique nas opções do menu
+     * @param type Tipo de opção
+     * @param toDo Comportamento a efetuar
      */
     public void addClickListener(MenuOption type, Consumer<MenuOption> toDo) {
         GameObject obj = new GameObject();

@@ -7,35 +7,35 @@ public interface CollidableEntity {
 
     /**
      *
-     * @see Método utilizado para verificar colisão com algum objeto à direita
+     * Utilizado para verificar colisão com algum objeto à direita
      * @return Se o objeto está a colidir com alguma coisa à direita
      */
     boolean isCollidingRight();
 
     /**
      *
-     * @see Método utilizado para verificar colisão com algum objeto por baixo
+     * Utilizado para verificar colisão com algum objeto por baixo
      * @return Se o objeto está a colidir com alguma coisa em baixo
      */
     boolean isCollidingBottom();
 
     /**
      *
-     * @see Método utilizado para verificar colisão com algum objeto à esquerda
+     * Utilizado para verificar colisão com algum objeto à esquerda
      * @return Se o objeto está a colidir com alguma coisa à esquerda
      */
     boolean isCollidingLeft();
 
     /**
      *
-     * @see Método utilizado para verificar colisão com algum objeto por cima
+     * Utilizado para verificar colisão com algum objeto por cima
      * @return Se o objeto está a colidir com alguma coisa em cima
      */
     boolean isCollidingTop();
 
     /**
      *
-     * @see Método utilizado para verificar colisão com um objeto
+     * Utilizado para verificar colisão com um objeto
      * @param obj - Objeto com o qual se pretende testar a colisão
      * @return Se o objeto está a colidir com o objeto passado por argumento
      */
@@ -43,7 +43,7 @@ public interface CollidableEntity {
 
     /**
      *
-     * @see Método utilizado para verificar colisão com qualquer objeto passado por argumento
+     * Utilizado para verificar colisão com qualquer objeto passado por argumento
      * @param objs - Objetos com o qual se pretende testar a colisão
      * @return Se o objeto está a colidir com algum dos objetos passados por argumento
      */

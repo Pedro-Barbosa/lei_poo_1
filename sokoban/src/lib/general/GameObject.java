@@ -8,7 +8,7 @@ public class GameObject extends JLabel {
     
     /**
      *
-     * @see Construtor da classe GameObject com uma imagem, definindo uma largura e altura específica.
+     * Construtor da classe GameObject com uma imagem, definindo uma largura e altura específica.
      * @param imgUrl - Diretório da imagem
      * @param width - Largura da imagem
      * @param height - Altura da imagem
@@ -19,7 +19,7 @@ public class GameObject extends JLabel {
     
     /**
      *
-     * @see Construtor da classe GameObject com uma imagem
+     * Construtor da classe GameObject com uma imagem
      * @param imgUrl - Diretório da imagem
      */
     public GameObject(String imgUrl) {
@@ -27,7 +27,7 @@ public class GameObject extends JLabel {
     }
     
     /**
-     * @see Construtor por defeito da classe GameObject
+     * Construtor por defeito da classe GameObject
      */
     public GameObject() {
         initComponents();
@@ -50,7 +50,7 @@ public class GameObject extends JLabel {
     
     /**
      *
-     * @see Método utilizado para definir uma imagem.
+     * Utilizado para definir uma imagem.
      * @param url - Diretório da imagem
      */
     public void setImage(String url) {
@@ -60,7 +60,7 @@ public class GameObject extends JLabel {
     
     /**
      *
-     * @see Método utilizado para definir uma imagem com uma largura e altura específica.
+     * Utilizado para definir uma imagem com uma largura e altura específica.
      * @param url - Diretório da imagem
      * @param width - Largura da imagem
      * @param height - Altura da imagem
