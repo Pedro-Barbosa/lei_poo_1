@@ -1,11 +1,17 @@
 package main;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import javax.swing.JFrame;
-import lib.states.GameState;
+import lib.menu.MainMenu;
+import lib.enums.GameState;
+import lib.enums.MenuOption;
 
 public class Game extends javax.swing.JFrame {
 
     public static GameState gameState;
+    public static double screenWidth;
+    public static double screenHeight;
     
     public Game() {
         initComponents();
@@ -14,7 +20,45 @@ public class Game extends javax.swing.JFrame {
     
     private void initExtraComponents() {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        //centerWindow();
+        
+        // gets screen dimensions
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        screenWidth = screenSize.getWidth();
+        screenHeight = screenSize.getHeight();
+        
+        startMenu();
+    }
+    
+    private void startMenu() {
+        int menuX = (int) Math.floor(getValuePercentage(screenWidth, 0.25));
+        int menuY = (int) Math.floor(getValuePercentage(screenHeight, 0.25));
+        int width = (int) Math.floor(getValuePercentage(screenWidth, 0.50));
+        int height = (int) Math.floor(getValuePercentage(screenHeight, 0.50));
+        
+        MainMenu menu = new MainMenu(menuX, menuY, width, height);
+        
+        // defines options behaviours
+        menu.addClickListener(MenuOption.START,(t) -> {
+            System.out.println("START");
+        });
+        
+        menu.addClickListener(MenuOption.EDITOR,(t) -> {
+            System.out.println("EDITOR");
+        });
+        
+        menu.addClickListener(MenuOption.ABOUT,(t) -> {
+            System.out.println("ABOUT");
+        });
+        
+        menu.addClickListener(MenuOption.QUIT,(t) -> {
+            System.out.println("QUIT");
+            this.dispose();
+        });
+        
+        this.add(menu); 
+    }
+    private double getValuePercentage(double value, double percentage) {
+        return value * percentage;
     }
     
     /*
